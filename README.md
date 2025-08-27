@@ -1,1 +1,269 @@
 # Almaty-tourism-
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Шарын шатқалы — Туризм жобасы</title>
+  <meta name="description" content="Шарын шатқалындағы туризм инфрақұрылымын жақсарту жобасы: мәселелер, шешімдер, қауіпсіздік, экология."/>
+  <style>
+    :root {
+      --bg:#f7f7fb; --card:#fff; --text:#222; --muted:#5b6470; --brand:#1f6feb;
+      --accent:#f0f3f9; --shadow:0 8px 24px rgba(0,0,0,.08); --radius:18px;
+    }
+    *{box-sizing:border-box} html,body{margin:0; padding:0; font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; color:var(--text); background:var(--bg)}
+    header{
+      position:sticky; top:0; z-index:10; backdrop-filter:saturate(150%) blur(6px);
+      background:linear-gradient(180deg, rgba(255,255,255,.9), rgba(255,255,255,.6));
+      border-bottom:1px solid #e9ecf2;
+    }
+    .wrap{max-width:1100px; margin:0 auto; padding:0 16px}
+    .topbar{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+    .brand{display:flex; gap:10px; align-items:center}
+    .logo{width:40px; height:40px; border-radius:10px; background:linear-gradient(135deg,#ffb86b,#ff6b6b); box-shadow:var(--shadow)}
+    .brand h1{font-size:18px; margin:0}
+    nav a{color:var(--muted); text-decoration:none; margin:0 10px; font-weight:600}
+    nav a:hover{color:var(--brand)}
+    .actions{display:flex; gap:8px}
+    .btn{border:1px solid #dfe3eb; background:#fff; padding:8px 12px; border-radius:12px; cursor:pointer; font-weight:600}
+    .btn.primary{background:var(--brand); color:#fff; border-color:transparent}
+    .hero{padding:56px 0 24px}
+    .hero .card{display:grid; grid-template-columns:1.2fr .8fr; gap:22px; align-items:center}
+    .card{background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow); padding:22px}
+    h2{margin:0 0 10px; font-size:26px}
+    p{color:var(--muted); line-height:1.6}
+    .grid{display:grid; gap:16px}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+    .pill{display:inline-block; padding:6px 10px; border-radius:999px; background:var(--accent); color:#2a2f36; font-size:12px; margin-right:6px}
+    ul,ol{margin:10px 0 0 18px; color:var(--muted)}
+    section{padding:18px 0}
+    .footer{padding:28px 0; color:#667085; text-align:center}
+    .sms{display:inline-flex; align-items:center; gap:8px}
+    .tag{font-size:12px; color:#6b7280}
+    .gallery{display:grid; gap:10px; grid-template-columns:2fr 1fr 1fr}
+    .gallery div{border-radius:14px; height:140px; background-size:cover; background-position:center; box-shadow:var(--shadow)}
+    .gallery div.small{height:140px}
+    .map{border:0; width:100%; height:300px; border-radius:14px; box-shadow:var(--shadow)}
+    @media (max-width:900px){
+      .hero .card{grid-template-columns:1fr}
+      .grid.cols-3{grid-template-columns:1fr}
+      .grid.cols-2{grid-template-columns:1fr}
+      .gallery{grid-template-columns:1fr 1fr}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap topbar">
+    <div class="brand">
+      <div class="logo" aria-hidden="true"></div>
+      <h1 id="t-title">Шарын шатқалы — Туризм жобасы</h1>
+    </div>
+    <nav class="hide-on-mobile">
+      <a href="#about" id="n-about">Жоба</a>
+      <a href="#problems" id="n-problems">Мәселелер</a>
+      <a href="#solutions" id="n-solutions">Шешімдер</a>
+      <a href="#safety" id="n-safety">Қауіпсіздік</a>
+      <a href="#contact" id="n-contact">Байланыс</a>
+    </nav>
+    <div class="actions">
+      <button class="btn" id="lang-toggle" aria-label="Language">RU</button>
+      <a class="btn primary" href="#contact" id="cta-btn">Қатынас</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero" id="about">
+    <div class="card">
+      <div>
+        <span class="pill" id="pill-eco">Экожоба</span>
+        <span class="pill" id="pill-safe">Қауіпсіздік</span>
+        <h2 id="h-hero">Шарын шатқалында тұрақты туризм инфрақұрылымы</h2>
+        <p id="p-hero">
+          Жобаның мақсаты — табиғатты қорғап, туристерге жайлы жағдай жасау: био-дәретханалар,
+          сұрыпталатын қоқыс жәшіктері, демалыс аймақтары, ақпараттық көрсеткіштер және қауіпсіздік жүйелері.
+        </p>
+        <div class="tag" id="t-updated">Жаңартылды: 2025</div>
+      </div>
+      <div class="gallery">
+        <div style="background-image:linear-gradient(0deg,rgba(0,0,0,.25),rgba(0,0,0,.25)),url('https://images.unsplash.com/photo-1545243424-0ce743321e11?q=80&w=1200&auto=format&fit=crop');"></div>
+        <div class="small" style="background-image:url('https://images.unsplash.com/photo-1491554150235-0fc4a4c35e18?q=80&w=800&auto=format&fit=crop');"></div>
+        <div class="small" style="background-image:url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=800&auto=format&fit=crop');"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="problems">
+    <div class="grid cols-3">
+      <div class="card">
+        <h3 id="pb-1">Санитарлық тораптар жетіспейді</h3>
+        <p id="pb-1p">Көп нүктелерде био-дәретханалар жоқ немесе жеткіліксіз, кезек және тазалық мәселесі туындайды.</p>
+      </div>
+      <div class="card">
+        <h3 id="pb-2">Қауіпсіздік инфрақұрылымы әлсіз</h3>
+        <p id="pb-2p">SOS-бекеттер, алғашқы көмек пункттері мен бағыттаушы белгілер аз.</p>
+      </div>
+      <div class="card">
+        <h3 id="pb-3">Қоқыс пен экология</h3>
+        <p id="pb-3p">Сұрыптау жүйесі жоқ болғандықтан табиғи аймаққа салмақ түседі.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="solutions">
+    <div class="grid cols-2">
+      <div class="card">
+        <h2 id="sl-h">Шешімдер пакеті</h2>
+        <ol id="sl-list">
+          <li>Компостты био-дәретханалар (күн панелімен).</li>
+          <li>Қоқысты 4 фракцияға бөлу: пластик, шыны, қағаз, органика.</li>
+          <li>Көлеңкелі демалыс аймағы, лавкалар, көрініс алаңы.</li>
+          <li>QR-кодты ақпараттық стендтер (kk/ru/en).</li>
+          <li>SOS-қораптар, бағыттайтын бағаналар, карта.</li>
+        </ol>
+      </div>
+      <div class="card">
+        <h2 id="size-h">Модуль өлшемдері (примерно)</h2>
+        <ul id="size-list">
+          <li>Негізгі модуль: 1×1 м, биіктігі ~2.2 м (WC, SOS, стенд).</li>
+          <li>Мини-модуль: 0.60×0.60 м, биіктігі ~1.2 м (қоқыс жәшігі).</li>
+          <li>Материал: металл каркас + ағаш/композит құм түсті қаптама.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="safety">
+    <div class="card">
+      <h2 id="sf-h">Қауіпсіздік және қолжетімділік</h2>
+      <ul id="sf-list">
+        <li>Маршрут бойына әр 300–500 м сайын бағыттаушы белгілер.</li>
+        <li>Күрделі аймақтарға парапет/қоршау, тайғанамайтын жабын.</li>
+        <li>Алғашқы көмек жинағы және эвакуация нүктелері картасы.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2 id="map-h">Карта</h2>
+      <iframe class="map" loading="lazy"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28257.22122187457!2d78.976!3d43.35!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z0KfQtdC70LXQvdC10LrQvtC90YLRgCDQodC-0LvQu9C10L3QvdGL0LkgKFNocmFyeW4gQ2FueW9uKQ!5e0!3m2!1sru!2skz!4v1700000000000">
+      </iframe>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="grid cols-2">
+      <div class="card">
+        <h2 id="ct-h">Байланыс</h2>
+        <p><strong>Тел:</strong> <a href="tel:+77074120911">+7 707 412 09 11</a></p>
+        <p><strong>Email:</strong> <a href="mailto:info@sharynproject.kz">info@sharynproject.kz</a></p>
+        <p><a class="btn sms" id="sms-btn" href="sms:+77074120911?&body=Сәлем! Шарын жобасы туралы ақпарат керек.">SMS жіберу</a></p>
+        <p class="tag" id="ct-note">Сайт демо нұсқа, мазмұнды кейін толықтырасыз.</p>
+      </div>
+      <div class="card">
+        <h2 id="doc-h">Құжаттар мен макет</h2>
+        <p id="doc-p">Жобаға: өлшемдік сызбалар (1×1 м және 0.6×0.6 м), материал спецификациясы, қауіпсіздік регламенті кірістіріледі.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    © 2025 • Шарын шатқалы жобасы • <span id="foot-t">Тұрақты туризм және экология</span>
+  </div>
+</footer>
+
+<script>
+  // Қарапайым тіл ауыстырғыш (KK <-> RU)
+  const dict = {
+    ru: {
+      title:"Каньон Шарын — Туристический проект",
+      nAbout:"Проект", nProblems:"Проблемы", nSolutions:"Решения", nSafety:"Безопасность", nContact:"Контакты",
+      cta:"Связаться", pillEco:"Экопроект", pillSafe:"Безопасность",
+      heroH:"Устойчивая туристическая инфраструктура в каньоне Шарын",
+      heroP:"Цель — бережно сохранить природу и создать комфорт: био-туалеты, раздельные урны, зоны отдыха, навигация и система безопасности.",
+      updated:"Обновлено: 2025",
+      pb1:"Недостаток санитарных узлов", pb1p:"Во многих местах нет или мало био-туалетов, возникают очереди и вопросы чистоты.",
+      pb2:"Слабая безопасность", pb2p:"Мало SOS-постов, пунктов первой помощи и указателей.",
+      pb3:"Мусор и экология", pb3p:"Нет системы раздельного сбора, на природу растёт нагрузка.",
+      slH:"Пакет решений",
+      slList:[
+        "Компостные био-туалеты (с солнечными панелями).",
+        "Разделение мусора на 4 фракции: пластик, стекло, бумага, органика.",
+        "Теневые зоны отдыха, лавки, смотровые площадки.",
+        "Инфостенды с QR-кодами (kk/ru/en).",
+        "SOS-боксы, направляющие столбы, карта."
+      ],
+      sizeH:"Размеры модулей (примерно)",
+      sizeList:[
+        "Базовый модуль: 1×1 м, высота ~2.2 м (WC, SOS, стенд).",
+        "Мини-модуль: 0.60×0.60 м, высота ~1.2 м (урна).",
+        "Материал: металл-каркас + песочный композит/дерево."
+      ],
+      sfH:"Безопасность и доступность",
+      sfList:[
+        "Каждые 300–500 м — указатели маршрута.",
+        "Ограждения и нескользящее покрытие на сложных участках.",
+        "Аптечки и карта эвакуационных точек."
+      ],
+      mapH:"Карта",
+      ctH:"Контакты",
+      ctNote:"Демо-версия сайта — наполнение обновляется.",
+      docH:"Документы и макет",
+      docP:"В проект входят: габаритные схемы (1×1 м и 0.6×0.6 м), спецификация материалов, регламент безопасности.",
+      foot:"Устойчивый туризм и экология",
+      heroBtn:"Связаться"
+    },
+    kk: {} // Kazakh is default text in HTML
+  };
+
+  const $ = s => document.querySelector(s);
+  const langBtn = $("#lang-toggle");
+
+  function setRU(){
+    document.title = dict.ru.title;
+    $("#t-title").textContent = dict.ru.title;
+    $("#n-about").textContent = dict.ru.nAbout;
+    $("#n-problems").textContent = dict.ru.nProblems;
+    $("#n-solutions").textContent = dict.ru.nSolutions;
+    $("#n-safety").textContent = dict.ru.nSafety;
+    $("#n-contact").textContent = dict.ru.nContact;
+    $("#cta-btn").textContent = dict.ru.cta;
+    $("#pill-eco").textContent = dict.ru.pillEco;
+    $("#pill-safe").textContent = dict.ru.pillSafe;
+    $("#h-hero").textContent = dict.ru.heroH;
+    $("#p-hero").textContent = dict.ru.heroP;
+    $("#t-updated").textContent = dict.ru.updated;
+    $("#pb-1").textContent = dict.ru.pb1; $("#pb-1p").textContent = dict.ru.pb1p;
+    $("#pb-2").textContent = dict.ru.pb2; $("#pb-2p").textContent = dict.ru.pb2p;
+    $("#pb-3").textContent = dict.ru.pb3; $("#pb-3p").textContent = dict.ru.pb3p;
+    $("#sl-h").textContent = dict.ru.slH;
+    const sl = $("#sl-list"); sl.innerHTML = ""; dict.ru.slList.forEach(i=>{const li=document.createElement('li'); li.textContent=i; sl.appendChild(li);});
+    $("#size-h").textContent = dict.ru.sizeH;
+    const sz = $("#size-list"); sz.innerHTML = ""; dict.ru.sizeList.forEach(i=>{const li=document.createElement('li'); li.textContent=i; sz.appendChild(li);});
+    $("#sf-h").textContent = dict.ru.sfH;
+    const sfl = $("#sf-list"); sfl.innerHTML = ""; dict.ru.sfList.forEach(i=>{const li=document.createElement('li'); li.textContent=i; sfl.appendChild(li);});
+    $("#map-h").textContent = dict.ru.mapH;
+    $("#ct-h").textContent = dict.ru.ctH;
+    $("#ct-note").textContent = dict.ru.ctNote;
+    $("#doc-h").textContent = dict.ru.docH;
+    $("#doc-p").textContent = dict.ru.docP;
+    $("#foot-t").textContent = dict.ru.foot;
+    langBtn.textContent = "KK";
+    localStorage.setItem("lang","ru");
+  }
+  function setKK(){
+    location.reload(); // мәтін әдепкі KK, қайта жүктеу жеткілікті
+    localStorage.setItem("lang","kk");
+  }
+  langBtn.addEventListener("click", ()=>{
+    if(langBtn.textContent.trim()==="RU"){ setRU(); }
+    else{ setKK(); }
+  });
+  // restore
+  if(localStorage.getItem("lang")==="ru"){ setRU(); }
+</script>
+</body>
+</html>
